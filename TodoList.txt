@@ -1,0 +1,483 @@
+﻿                --TIME ESTIMATION--
+? für tutorial
+37
+            --TODOS--
+fix stick
+
+
+  --nice to haves--
+[ ]make 2 hand do more damage
+[ ]make boss parry
+[ ]make boss block
+[ ]make backstabbable toggle per phase
+
+[ ]create setting to change controls
+[ ]reimplement old bosses special actions
+[ ]fix/disable others player actions
+
+    --Done--
+[x] Player Movement
+[x] Player Third Person Camera
+[x] Player Third Person Camera Colision
+[x] Player Rolling
+[x] Player Sprinting
+[x] Player Falling 
+[x] Weapon Items
+[x] Player light Attack
+[x] Player heavy Attack
+[x] Player health / damage 
+[x] Player Weapon Combo
+[x] Player Idle Anims
+[x] Quick Slots
+[x] Weapon Equip Slots
+[x] Weapon Stamina Drain
+[x] Item Pickups (buggy)
+[x] Pop Ups (buggy)
+[x] Inventory Screen
+[x] Inventory Slot
+[x] Equipment Screen
+[x] Target Lock ON
+[x] Weapon Switching
+[x] Two Handed Weapon (currently unused)
+[x] Enemy AI (State Machine for testing)
+[x] Player Death
+[x] Rolling Invulnerability
+[x] Spell System
+[x] Backstabbing
+[x] Riposting
+[x] Rotation during attack partial lock
+[x] Stamina dependence for actions
+[x] Parrying
+[x] Enemy Healthbar
+[x] Fireball Spell
+[x] Estus Flasks
+[x]Fix Dodge
+[x]Fix Camera Placement
+[x]Find better attack anims and add them
+    [x]fix movement
+    [x]get goap to work
+    [x]reimplement connections for
+        [x] idle
+        [x] movement
+        [x] Attack
+    [x]fix damage to Player
+    [x]decide if refactoring movement makes sense
+    [x]at least add walk around player and correct stopping distance
+    [x]Add focus point
+    [x]fix damage to Boss and healthbar
+    [x]fix collision with weapons bug 
+    [x]make boss stagger when parried
+    [x]make boss backstabbable (toggle per phase maybe)
+    
+    
+[x]fix/test misc actions for player
+   [x]fix block
+   [x]fix parry
+   [x]fix riposte
+
+
+[x]add after boss kill for next test
+[x]add after player death for restart test  
+[x] test manager script
+[x] script that reinstatntiates the player and deletes the old one
+[x] script that reinstatntiates the boss and deletes the old one
+[x] activates the overlay for next test
+[x]re-add main menu
+[x]remove current menu
+[x]find way to upload test result somewhere
+[x]add button to skip test
+[x]add button to skip test functionality
+[x]create ui for tests
+[x]make new animation attacks (purchased)
+[x] fix player test manager only taking one player
+[x] fix heavy attack
+[x] fix estus display
+[x] fix camera position
+[x] fix dodge roll (might go to direction character is facing or might not be broken)
+[x]fix enemy movement script
+[x]fix enemy attack randomizer
+[x]fix enemy attack combos (more or less still not perfect)
+[x]fix enemy amount of attacks and add attacks that fit for baseline
+[x]set events to attacks
+[x]fix rotation during animation event
+[x]find out what to test exactly
+[x]create first test
+[x]number of deaths
+[x]number of dodges or parries or backstabs
+[x]time per test spent
+[x]damage taken
+[x]take other inputs as test data 
+[x]test/fix test skipping
+[x]test all tests to see if they have the right stats
+[x]test survey data 
+[x]and see if it is in file
+[x]write actions to settings menu
+
+                --NICE TO KNOW--
+online fragebogen tool
+id generien und dann an fragebogen dazutun
+
+Unterfragen der Hauptfrage:
+Welcher Faktor beeinflusst den Furst am meinsten/wenigsten
+Gibts einen common faktor
+
+Baseline Test
+
+Welches tests sollen in die Umfrage?
+1: Health / 2
+2: Stamina / 2
+3: Health Potions 3 to none
+4: Player Damage low 
+5: Player damage high
+6: Player Attacks are good
+7: Player Attacks with one attack
+8: Player Attacks are not good but not terrible
+9: Player Movement Speed low
+10: Player Movement Speed high
+11: Initial health
+12: Stamina regeneration rate low
+13: character size increased
+14: character size decreased
+
+Boss:
+15: Health++
+16: Health--
+17: Damage--
+18: Damage++
+19: only one attack
+20: many attacks 
+21: attack speed high 
+22: attack speed low
+23: attack damage variance (0-100 eg)
+24: size++
+25: size--
+26: second phases heal enemy
+
+Mesurements:
+player frustration
+number of deaths
+number of dodges or parries or backstabs
+time per test spent
+damage taken
+
+open questions:
+player experience in souls likes
+standard platforms if any
+age
+engagement level
+enjoyment level
+written feedback
+description of specific challenges
+                
+in der suche "action" eingeben fürhrt zu den controls
+                
+                --BUGS--
+fogwall passthrough doesnt work but trigger for bosshealth showup does so its eh
+
+chest doesnt work but who cares tbh
+
+//Buttons die gemappt sind
+// shift roll/sprint
+// e attack
+// r shield
+// right button attack
+// enter
+// space jump
+// esc
+// q
+// y
+//f parry
+//x flask
+//arrows für quickslots
+//z für 2 hand
+
+
+
+//ATTACKS
+OHLight 01 - basic shit attack
+OHLight 02 - basic shit spin
+OHLight 03 - basic shit overhead jump attack die nie treffen wird xD
+OHLight 04 - basic spin schneller und besser?
+OHLight 05 - komischer horizontal slash mit beinspazm
+OHLight 06 - anklopfer der nicht treffen wird bei 1.5 size
+OHLight 07 - langsamer horizontal slash der nach links tiltet
+OHLight 08 - 3 hit combo die nicht richtig trackt
+OHLight 09 - komischer uppercut
+OHLight 10 - wheel slash actually ok
+OHLight 11 - knieender slap?
+OHLight 12 - langer stab
+OHLight 13 - langer upward slash
+OHLight 14 - jump back dann slash
+OHLight 15 - langer stab again
+OHLight 16 - schneller slash
+OHLight 17 - klassicher slash
+OHLight 18 - klassicher combo slash
+OHLight 19 - dodge dann stab super leicht ausweichbar
+OHLight 20 - klassicher slash schnell
+
+
+                --EPISODES--
+63-72 ai boss und poise
+
+102 charge attacks
+107 guard breaks (105-6 auch)
+
+109 advanced ai aber erst wenn meine ai rennt und zum verbessern
+
+ep 120 input / action queue
+137-39 movement overhaul
+
+
+
+=MITTELWERT(B2:B337)
+
+ 
+ /*
+  Write me a thesis on why the bosses in souls games ride a fine line between being frustrating and challenging to fight against and how they archieve that
+"The bosses in Souls games masterfully walk the thin line between frustration and challenge by utilizing a combination of intimidating design, precise mechanics,
+ and a steep learning curve. Through the use of imposing architecture, towering health pools, and unique move sets, these bosses immediately establish themselves as formidable
+  opponents. However, upon closer examination, players discover that each attack and movement can be anticipated and avoided through careful observation and timing. 
+  This creates a satisfying sense of accomplishment for players who are able to overcome the initial difficulty and defeat the boss. Additionally, the high level of 
+  difficulty serves as a motivator for players to continue honing their skills and mastering the mechanics of the game. Thus, the Souls series bosses effectively achieve 
+  the delicate balance between frustration and challenge, making for a compelling and rewarding gaming experience."
+
+
+
+
+stephan.steidl903@gmail.com
+extend the text by adding exactly how they can be frustrating with examples and do the same for challenge
+"The bosses in Souls games masterfully walk the thin line between frustration and challenge by utilizing a combination of intimidating design, 
+precise mechanics, and a steep learning curve. Through the use of imposing architecture, towering health pools, and unique move sets, these bosses immediately 
+establish themselves as formidable opponents. For example, the Ornstein and Smough boss fight from Dark Souls is notorious for its difficulty, as players must 
+face two powerful enemies at once, each with their own distinct attack patterns and weaknesses.
+
+However, upon closer examination, players discover that each attack and movement can be anticipated and avoided through careful observation and timing. 
+For example, the Bloodborne boss, Father Gascoigne, may appear overwhelming at first glance with his quick and powerful attacks, but players can learn to
+ dodge and parry his moves, leading to an opening for a counter-attack. This creates a satisfying sense of accomplishment for players who are able to overcome
+  the initial difficulty and defeat the boss.
+
+Additionally, the high level of difficulty serves as a motivator for players to continue honing their skills and mastering the mechanics of the game. 
+The Souls series bosses effectively achieve the delicate balance between frustration and challenge by providing players with a sense of accomplishment 
+and satisfaction once they have been defeated. Thus, the Souls series bosses effectively achieve the delicate balance between frustration and challenge, 
+making for a compelling and rewarding gaming experience."
+
+
+
+
+stephan.steidl903@gmail.com
+what makes a bossfight frustrating in the soulsborne series?
+A bossfight in the Soulsborne series can be frustrating for a variety of reasons. Some common causes of frustration include:
+
+Unpredictable or difficult-to-read attack patterns: Many bosses in the Soulsborne series have complex and varied move sets, 
+which can be difficult for players to anticipate and react to. This can lead to players being caught off guard by unexpected attacks and taking unnecessary damage.
+
+High difficulty level: The bosses in Soulsborne games are notoriously difficult, and many players will die multiple times before 
+finally defeating a boss. This can be frustrating for players who are struggling to make progress.
+
+Limited opportunities for healing: The Soulsborne series is known for its limited healing opportunities during boss fights, which can 
+make the fights more difficult and frustrating for players who are not well-prepared.
+
+Unfavorable mechanics or level design: The environment of a bossfight can also play a role in how frustrating it can be. A bossfight 
+that takes place in a small, cramped area with little room to maneuver can make it harder for players to dodge and evade attacks.
+
+Unclear mechanics: Some bossfight mechanics are not explained clearly in the game and players have to figure them out by trial and error, 
+this can be frustrating for some players.
+
+Overall, a bossfight in the Soulsborne series can be frustrating when it feels unfair or impossible to overcome, but also these elements are 
+part of the challenge that the series propose to the players.
+
+
+
+
+stephan.steidl903@gmail.com
+what makes the bossfights challenging in the soulsborne series?
+A bossfight in the Soulsborne series can be challenging for a variety of reasons. Some common causes of challenge include:
+
+Complex and varied attack patterns: Many bosses in the Soulsborne series have complex and varied move sets, which require players to pay close 
+attention and react quickly to avoid taking damage. This can make the fights challenging as players must learn and anticipate the patterns of the boss.
+
+High difficulty level: The bosses in Soulsborne games are notoriously difficult, and many players will die multiple times before finally defeating a boss. 
+This high level of difficulty can be challenging for players, as they must learn the mechanics of the game and the boss fight, and also master their own skills and equipment to be able to overcome the obstacle.
+
+Limited opportunities for healing: The Soulsborne series is known for its limited healing opportunities during boss fights, which can make the fights more 
+difficult and challenging for players who are not well-prepared.
+
+Multi-phase fights: Some boss fights have multiple phases, each with different mechanics and attack patterns. This can be challenging for players as they 
+must adapt to the changing conditions of the fight.
+
+Unfavorable mechanics or level design: The environment of a bossfight can also play a role in how challenging it can be. A bossfight that takes place in a large, 
+open area with multiple platforms and obstacles can make it harder for players to dodge and evade attacks and also can be challenging to figure out the best strategy to defeat the boss.
+
+Unclear mechanics: Some bossfight mechanics are not explained clearly in the game and players have to figure them out by trial and error, this can be challenging 
+for some players.
+
+Overall, a bossfight in the Soulsborne series can be challenging as it requires players to learn, adapt, and master the game's mechanics and their own skills to 
+overcome the obstacles. But this challenge is what makes the victory over the bosses so rewarding for the players.
+
+
+
+
+stephan.steidl903@gmail.com
+what design patterns where used for the soulsborne bossfights?
+The Soulsborne series is known for its challenging and memorable boss fights, and the design of these fights employs a number of patterns to create a 
+unique and memorable experience for players. Some of the common design patterns used in Soulsborne boss fights include:
+
+Intimidating design: Many bosses in the Soulsborne series are designed to be intimidating and imposing, with towering health pools, imposing architecture, 
+and unique move sets. This serves to establish the bosses as formidable opponents and create a sense of anticipation and awe for players before the fight.
+
+Multi-phase fights: Many bosses in the Soulsborne series have multiple phases, each with different mechanics and attack patterns. This creates a sense of 
+progression and escalation in the fight, as players must adapt to the changing conditions of the battle.
+
+Limited opportunities for healing: The Soulsborne series is known for its limited healing opportunities during boss fights, which adds to the difficulty and 
+challenge of the fight. This forces players to be mindful of their health and make strategic decisions about when to engage and when to retreat.
+
+Learning curve: The Soulsborne series is known for its steep learning curve, and many boss fights require players to learn and master the mechanics of the fight and the game.
+
+Environmental hazards: Some boss fights take place in environments that can be used to the player's advantage, such as ledges, walls, and traps. These hazards 
+can be used to dodge, parry or even to deal extra damage to the boss.
+
+Unclear mechanics: Some bossfight mechanics are not explained clearly in the game and players have to figure them out by trial and error, this can be challenging
+ but also rewarding for players as they discover new ways to defeat the boss.
+
+Overall, the Soulsborne series uses a combination of intimidating design, precise mechanics, and a steep learning curve to create challenging and memorable boss 
+fights that are both frustrating and rewarding for players.
+
+
+
+
+stephan.steidl903@gmail.com
+what systems are present or in use whilst in a soulsborne bossfight that can change the way the fight goes
+During a bossfight in the Soulsborne series, there are a number of systems in place that can change the way the fight goes. These systems include:
+
+Health and stamina: The player and the boss both have health and stamina meters, which are depleted by taking damage and performing certain actions. 
+Managing these resources is crucial to success in a boss fight, as running out of stamina can leave the player vulnerable to attacks and depleting the boss' health 
+will make the fight easier.
+
+Item usage: Players can use a variety of items during a boss fight, such as healing items, weapons, and magic spells. These items can be used to restore health, 
+deal damage, and gain an advantage in the fight.
+
+Positioning and movement: The player's positioning and movement during a boss fight can play a crucial role in the outcome of the fight. Players must learn to dodge, 
+roll, parry and attack at the right time to be able to defeat the boss.
+
+Environmental hazards: Some boss fights take place in environments that can be used to the player's advantage, such as ledges, walls, and traps. These hazards can be 
+used to dodge, parry or even to deal extra damage to the boss.
+
+Multi-phase fights: Many bosses in the Soulsborne series have multiple phases, each with different mechanics and attack patterns. This creates a sense of progression 
+and escalation in the fight, as players must adapt to the changing conditions of the battle.
+
+Covenants: Covenants are groups of players that have joined together to follow certain rules and objectives to gain certain rewards. Some covenants can change the way 
+the fight goes, like the covenant "Blade of the Darkmoon" that allows players to summon each other to fight together in a boss fight.
+
+These systems are in constant interaction during the fight and players must master them to be able to defeat the bosses in the Soulsborne series.
+
+
+
+
+stephan.steidl903@gmail.com
+How could you measure challenge and frustration in the soulsborne series?
+Measuring challenge and frustration in the Soulsborne series can be a complex task, as these factors can be subjective and depend on the player's individual 
+skill level and experience. However, some methods that could be used to measure challenge and frustration in the Soulsborne series include:
+
+Surveys: Surveys can be used to gather data from players about their perceptions of challenge and frustration in the Soulsborne series. These surveys can include 
+questions about the player's experience with the game, their difficulty level, and their overall satisfaction with the game.
+
+Playtesting: Playtesting can be used to observe players as they interact with the game and measure their level of challenge and frustration. This can be done by 
+having players play through a section of the game and then conducting a debriefing session to gather feedback about their experience.
+
+Player data: Data such as the number of times a player died in a boss fight, how long it took them to defeat the boss, and the number of times they had to retry a 
+section of the game can be analyzed to infer the player's level of challenge and frustration.
+
+Biometric measurements: Biometric measurements such as heart rate and galvanic skin response can be used to measure a player's level of stress and anxiety during a 
+boss fight, which can be indicative of frustration.
+
+Online reviews and forums: Online reviews and forums can be used to gather player feedback about the game and the level of challenge and frustration they experienced.
+
+It's important to consider that all these methods have limitations and should be used in combination to get a more accurate picture of the player's experience.
+
+
+
+
+stephan.steidl903@gmail.com
+What metrics could you base challenge on in soulsborne games ?
+When measuring challenge in Soulsborne games, there are several metrics that can be used:
+
+Death count: The number of times a player dies during a boss fight can be used as a metric for challenge. A higher death count can indicate a higher level of 
+difficulty for the player.
+
+Time to defeat: The amount of time it takes a player to defeat a boss can also be used as a metric for challenge. A longer time to defeat can indicate a higher 
+level of difficulty for the player.
+
+Number of attempts: The number of times a player tries to defeat a boss can also be used as a metric for challenge. A higher number of attempts can indicate a 
+higher level of difficulty for the player.
+
+Player's skill level: A player's skill level can be measured by the number of successful dodges, parries, and counter-attacks made during a boss fight. A lower 
+skill level can indicate a higher level of difficulty for the player.
+
+Player's equipment: A player's equipment level can be measured by their weapon and armor stats, this can indicate a higher or lower level of difficulty for the player.
+
+Player's strategy: A player's strategy can be measured by the number of times they use healing items, use environmental hazards or use specific weapons or spells 
+during the boss fight, this can indicate a higher or lower level of difficulty for the player.
+
+These metrics can be used in combination to get a more accurate picture of the player's experience and level of difficulty in the game. However, it's important to 
+note that challenge is a subjective experience and that these metrics should be used as a guide rather than a definitive measure of a player's experience.
+
+
+
+
+stephan.steidl903@gmail.com
+On what metrics could you compare the individual bosses of soulsborne games on?
+When comparing the individual bosses of Soulsborne games, there are several metrics that can be used:
+
+Health pool: The total amount of health a boss has can be used as a metric for comparing their difficulty level. 
+A higher health pool can indicate a more difficult boss.
+
+Number of phases: The number of phases a boss fight has can be used as a metric for comparing their difficulty level.
+ A boss with more phases can be considered more challenging than one with fewer phases.
+
+Attack patterns: The number, variety, and complexity of the attack patterns a boss has can be used as a metric for comparing their difficulty level. 
+A boss with more complex and varied attack patterns can be considered more challenging than one with simpler attack patterns.
+
+Environmental factors: The environment in which the boss fight takes place can be used as a metric for comparing their difficulty level. 
+A boss fight that takes place in a smaller, more cramped space with fewer opportunities to dodge and evade attacks can be considered more challenging than one that takes place in a larger, more open space.
+
+Difficulty level: The difficulty level of the bossfight can be measured by the number of deaths, retries, and time it takes to defeat the boss.
+
+Popularity: The popularity of a boss can be measured by the number of players that talk, write or make videos about it, this can indicate how memorable, 
+challenging or iconic the boss is.
+
+Uniqueness: The uniqueness of a boss can be measured by the number of mechanics, moves or design elements that are exclusive to it and not present in 
+other bosses, this can indicate how original and different the boss is.
+
+These metrics can be used in combination to get a more accurate picture of the boss's difficulty level and overall experience, 
+but it's important to note that difficulty is a subjective experience and that these metrics should be used as a guide rather than a definitive measure 
+of a boss's difficulty level.
+
+
+
+
+stephan.steidl903@gmail.com
+Create categories in which the soulsborne bosses will be placed in based on their behaviour during a bossfight 
+Aggressive: These bosses are known for their fast and relentless attack patterns, they prioritize aggression over defense and they are relentless
+ in their pursuit of the player.
+
+Defensive: These bosses are known for their heavy armor, high health pool, and tendency to block and parry attacks. They prioritize defense over aggression 
+and require a different approach to defeat.
+
+Trickster: These bosses are known for their unexpected and unpredictable attack patterns, they may use illusions, clones, or other tricks to 
+confuse and disorient the player.
+
+Juggernaut: These bosses are known for their massive size and high health pools, they are slow but have powerful attacks that can deal massive damage to the player.
+
+Multi-Phase: These bosses have multiple forms, each with different mechanics and attack patterns, players must adapt to the changing conditions 
+of the fight in order to defeat them.
+
+Environmental: These bosses are heavily dependent on the environment to perform their attacks, they use the environment to their advantage 
+and players must use it to their own advantage in order to defeat them.
+
+Summoning: These bosses can summon other enemies during the fight, players must deal with both the boss and the summoned enemies to defeat them.
+
+Puzzle-based: These bosses require players to solve a puzzle or figure out a specific strategy in order to defeat them, they have unique mechanics 
+that players must master.
+
+Keep in mind that many bosses in the Soulsborne series fall into multiple categories and that these are generalizations, each boss has unique features 
+and characteristics that make them distinct from others.*/
